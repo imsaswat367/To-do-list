@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background: #f4f4f4;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,75 +9,106 @@ body {
 }
 
 .todo-container {
-    background-color: #fff;
+    background: white;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
 }
 
 h1 {
-    margin-bottom: 20px;
+    text-align: center;
 }
 
-.input-container {
+#todo-form {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 20px;
 }
 
-#new-task {
-    width: 70%;
+#todo-input {
+    width: 75%;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #ddd;
     border-radius: 5px;
 }
 
-#add-task-button {
-    width: 25%;
+button {
     padding: 10px;
-    background-color: #28a745;
-    color: #fff;
     border: none;
+    background: #5cb85c;
+    color: white;
     border-radius: 5px;
     cursor: pointer;
 }
 
-#add-task-button:hover {
-    background-color: #218838;
+button:hover {
+    background: #4cae4c;
 }
 
-ul {
+.filters {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.filter-btn {
+    padding: 10px;
+    border: none;
+    background: #ddd;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background: #5cb85c;
+    color: white;
+}
+
+#todo-list {
     list-style: none;
     padding: 0;
 }
 
-li {
-    background-color: #f9f9f9;
+.todo-item {
+    background: #f9f9f9;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    margin-bottom: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 10px;
 }
 
-li.completed {
+.todo-item.completed {
     text-decoration: line-through;
-    color: #888;
+    background: #e0e0e0;
 }
 
-.remove-button {
-    background-color: #dc3545;
-    color: #fff;
+.todo-item .actions {
+    display: flex;
+    gap: 10px;
+}
+
+.todo-item .actions button {
+    background: #d9534f;
+    padding: 5px;
     border: none;
     border-radius: 5px;
-    padding: 5px 10px;
     cursor: pointer;
+    color: white;
 }
 
-.remove-button:hover {
-    background-color: #c82333;
+.todo-item .actions button.edit {
+    background: #5bc0de;
+}
+
+.todo-item .actions button.edit:hover {
+    background: #31b0d5;
+}
+
+.todo-item .actions button.delete:hover {
+    background: #c9302c;
 }
